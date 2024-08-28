@@ -6,6 +6,7 @@ function getUserChoice(userInput) {
     return userInput;
   } else {
     console.log('Did not choose rock, paper, or scissors');
+    return 'Did not choose rock, paper, or scissors'
   }
 }
 
@@ -65,3 +66,6 @@ function playGame() {
 }
 
 playGame()
+
+// Export functions for testing
+module.exports = { getUserChoice, getComputerChoice, determineWinner };
