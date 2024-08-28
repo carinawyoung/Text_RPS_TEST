@@ -1,0 +1,15 @@
+{
+  "name": "rockpaperscissorstest",
+  "version": "1.0.0",
+  "description": "Writing test code for a short Rock, Paper, Scissors text-based game",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^29.7.0"
+  }
+}
