@@ -1,3 +1,11 @@
+/* 
+This was a simple Rock/Paper/Scissors game I coded with prompts from codecademy.com.
+I've been wanting to practice writing tests, so I decided 
+to use Node.js and Jest and add tests for the program.
+
+Carina Young 08/29/2024
+*/
+
 // A function to check that the user choice is valid
 function getUserChoice(userInput) {
   userInput = userInput.toLowerCase();
