@@ -76,4 +76,4 @@ function playGame() {
 playGame()
 
 // Export functions for testing
-module.exports = { getUserChoice, getComputerChoice, determineWinner };
+module.exports = { getUserChoice, getComputerChoice, determineWinner, playGame };

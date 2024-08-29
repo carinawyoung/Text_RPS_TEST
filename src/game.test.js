@@ -1,6 +1,9 @@
-// tell Jest which functions to import for testing
-const { getUserChoice, getComputerChoice, determineWinner } = require('./game');
 
+// tell Jest which functions to import for testing
+const { getUserChoice, getComputerChoice, determineWinner, playGame} = require('./game');
+
+
+////////  Unit Tests  ///////////////////
 describe('getUserChoice', () => {
     it('should return the user input when it is valid', () => {
         // This test ensures that valid inputs return the same value
@@ -52,3 +55,18 @@ describe('determineWinner', () => {
         expect(determineWinner('paper', 'rock')).toBe('You won!');
     });
 }); 
+
+///////// Integration Test //////////////
+
+describe('playGame integration test', () => {
+    it('should correctly run the game and log the results', () => {
+        const logSpy = jest.spyOn(console, 'log'); // Spy on console.log
+        playGame(); // Run the game function
+
+        expect(logSpy).toHaveBeenCalledWith(expect.stringContaining('You chose:'));
+        expect(logSpy).toHaveBeenCalledWith(expect.stringContaining('Computer chose:'));
+        expect(logSpy).toHaveBeenCalledWith(expect.stringMatching(/You won!|Computer won!|Game was a tie!/));
+
+        logSpy.mockRestore();  // Restore original console.log functionality
+    });
+});
