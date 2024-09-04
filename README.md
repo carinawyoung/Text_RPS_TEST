@@ -6,4 +6,4 @@ to use Node.js and Jest and add unit tests and an integration test.
 
 I found I really like Jest - it's a well-organized and straightforward testing framework, great for my first JavaScript testing!
 
-Carina Young 08/29/2024
+Carina W Young 08/29/2024
